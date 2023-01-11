@@ -1,3 +1,6 @@
+const Dealership = require('./dealership');
+const Car = require("./car");
+
 const Customer = function(name, wallet){
     this.name = name;
     this.wallet = wallet;
@@ -15,3 +18,9 @@ Customer.prototype.buyCar = function(dealership, car) {
         this.car = car;
     }
 };
+
+// const dealership = new Dealership(name, maxNumberOfCars, currentStockOfCars);
+
+// const customer = new Customer("The Stig", 50000);
+// customer.buyCar(dealership, rs7);
+// console.log(customer); 

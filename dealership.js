@@ -1,4 +1,5 @@
 const Car = require("./car");
+const Customer = require("./customer");
 
 const Dealership = function(name, maxNumberOfCars, currentStockOfCars = []){
     this.name = name;
@@ -14,7 +15,7 @@ Dealership.prototype.countCarStock = function(){
 }
 Dealership.prototype.addCarToStock = function(newCar){
     if(this.currentStockOfCars.length >= this.maxNumberOfCars){
-        console.log("Cannot add more cars, dealership is at maximum capacity.");
+        console.log("Unable to add more cars, dealership is at maximum capacity.");
     } else {
         this.currentStockOfCars.push(newCar);
     }     // Adds cars to stock. (Modified: dealership cannot exceed the maximum number of cars that it can hold.)
@@ -37,6 +38,7 @@ const rs7 = new Car("Audi", 119000, "V8")
 const focus = new Car("Ford", 40000, "V4")
 
 const dealership = new Dealership("Khalil's Dealership",50,[hybrid919,odyssey, accord, rs7,focus])
+
 
 
 
