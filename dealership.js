@@ -17,8 +17,8 @@ Dealership.prototype.addCarToStock = function(newCar){
 Dealership.prototype.getManufacturers = function(){
     return this.currentStockOfCars.map(car => car.manufacturer); // Returns array of each car's manufacturers.
 }
-Dealership.prototype.findByManufacturers = function(){
-    return this.currentStockOfCars.filter(car => car.manufacturer === manufacturer); // Finds all cars from a single manufacturer.
+Dealership.prototype.findByManufacturer = function(manufacturer){
+    return this.currentStockOfCars.filter(car => car.manufacturer === manufacturer);; // Finds all cars from a single manufacturer.
 }
 Dealership.prototype.totalValueOfEntireStock = function(){
     return this.currentStockOfCars.reduce((accumulator, car) => accumulator + car.price, 0); // Finds total value of all cars in the dealership's stock.
