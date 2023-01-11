@@ -8,12 +8,18 @@ const Dealership = function(name, maxNumberOfCars, currentStockOfCars = []){
 
 //////////////////////////////    METHODS    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+
 Dealership.prototype.countCarStock = function(){
-    return this.currentStockOfCars.length;          // Counts number of cars in stock.
+    return this.currentStockOfCars.length;          // Counts number of cars in stock. 
 }
 Dealership.prototype.addCarToStock = function(newCar){
-    this.currentStockOfCars.push(newCar);           // Adds cars to stock.
+    if(this.currentStockOfCars.length >= this.maxNumberOfCars){
+        console.log("Cannot add more cars, dealership is at maximum capacity.");
+    } else {
+        this.currentStockOfCars.push(newCar);
+    }     // Adds cars to stock. (Modified: dealership cannot exceed the maximum number of cars that it can hold.)
 }
+
 Dealership.prototype.getManufacturers = function(){
     return this.currentStockOfCars.map(car => car.manufacturer); // Returns array of each car's manufacturers.
 }
