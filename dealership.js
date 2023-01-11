@@ -36,7 +36,7 @@ const accord = new Car("Honda", 25000, "V6")
 const rs7 = new Car("Audi", 119000, "V8")
 const focus = new Car("Ford", 40000, "V4")
 
-const dealership = new Dealership("Khalil's Dealership",50,[hybrid919,odyssey,rs7,focus])
+const dealership = new Dealership("Khalil's Dealership",50,[hybrid919,odyssey, accord, rs7,focus])
 
 
 
