@@ -2,7 +2,6 @@ const Dealership = require('./dealership');
 const Car = require('./Car');
 
 let dealership;
-let car;
 
 beforeEach(() => {
     dealership = new Dealership("Khalil's Dealership", 50, []);
