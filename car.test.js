@@ -7,14 +7,14 @@ beforeEach(() => {
 
 describe("can access properties", () => {
     test('has a manufacturer property', () => {
-        expect(car.manufacturer).toEqual('Ford');
+        expect(car.manufacturer).toBe('Ford');
     });
 
     test('has a price property', () => {
-        expect(car.price).toEqual(40000);
+        expect(car.price).toBe(40000);
     });
 
     test('has a engineType property', () => {
-        expect(car.engine).toEqual('V4');
+        expect(car.engine).toBe('V4');
     });
 });
